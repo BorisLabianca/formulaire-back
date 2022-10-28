@@ -35,6 +35,9 @@ app.post("/form", async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 });
+app.get("/", (req, res) => {
+  res.json({ message: "🎉C'est le serveur formulaire de Bobo !!!!🥳" });
+});
 
 app.all("*", (req, res) => {
   res.status(400).json({ message: "La page est introuvable" });
